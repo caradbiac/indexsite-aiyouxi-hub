@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万博体育 · 索引与资料说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #1e1f2a;
+            line-height: 1.6;
+        }
+
+        /* ===== 深色头图 ===== */
+        .hero {
+            background: linear-gradient(145deg, #0b0d17 0%, #1f2335 100%);
+            color: #e8ebf3;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle at 30% 40%, rgba(92, 130, 240, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #a6b2da;
+            max-width: 640px;
+            margin: 0 auto 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .meta-tag {
+            display: inline-block;
+            margin-top: 1.8rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #9ca8d9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== 正文浅色区 ===== */
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3.2rem 1.8rem 5rem;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 500;
+            margin: 2.6rem 0 1.2rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #eef0f6;
+            letter-spacing: 0.3px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1rem;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            border-bottom-color: #1d4ed8;
+        }
+
+        /* 卡片式特点 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .feature-card {
+            background: #f8faff;
+            border-radius: 16px;
+            padding: 1.6rem 1.4rem;
+            border: 1px solid #eaeef5;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #111827;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #384151;
+            margin-bottom: 0;
+        }
+
+        .quote-block {
+            background: #f0f4fe;
+            border-left: 4px solid #2563eb;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: normal;
+            color: #1f2937;
+        }
+
+        .quote-block p {
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-short {
+            margin: 2.5rem 0 1rem;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eceff5;
+        }
+
+        .faq-item strong {
+            font-weight: 500;
+            color: #0b0d17;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item span {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        .footnote {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e7ef;
+            font-size: 0.85rem;
+            color: #5f6a81;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+
+            .content {
+                padding: 2.2rem 1.2rem 3.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>信息索引 · 万博体育</h1>
+        <div class="sub">从资料整理与线索组织的角度，理解一个体育资讯与服务的聚合节点</div>
+        <div class="meta-tag">整理方向 · 产品说明式摘要</div>
+    </header>
+
+    <main class="content">
+        <!-- 摘要 / 叙述切入点 -->
+        <section>
+            <p>
+                在浏览和整理网络信息时，我们常常会遇到一些具有明确功能边界的站点——它们既不是泛娱乐社区，也不是单纯的内容博客，而是围绕特定兴趣领域（例如体育动态、赛事资料、相关服务）构建的集中页面。今天要梳理的，是一个以体育相关信息为主轴的索引式服务：<a href="https://m-wanboty.com">万博体育</a>。
+            </p>
+            <p>
+                从信息组织角度看，这类页面往往承担“轻量目录”或“主题入口”的角色。它不需要面面俱到，但应当提供清晰的领域轮廓、可操作的延伸线索，以及相对克制的品牌呈现。以下是对该站点产品特质与使用场景的观察。
+            </p>
+        </section>
+
+        <!-- 亮点 / 特点卡片 -->
+        <h2 class="section-title">核心特质</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>领域聚焦 · 体育主线</h3>
+                <p>内容始终围绕体育资讯、赛事动态及相关信息展开，不掺杂无关话题，便于对体育领域有兴趣的人快速建立认知锚点。</p>
+            </div>
+            <div class="feature-card">
+                <h3>索引式结构</h3>
+                <p>页面采用模块化的信息排列，从标题到内文段落均保持一定逻辑层级，适合作为资料整理的参考节点，而非简单的内容堆叠。</p>
+            </div>
+            <div class="feature-card">
+                <h3>视觉克制 · 可读优先</h3>
+                <p>不使用高饱和度配色或强动效，版面留白与字号对比趋于平衡，降低阅读干扰。强调色仅用于链接与关键强调元素。</p>
+            </div>
+            <div class="feature-card">
+                <h3>轻量化入口</h3>
+                <p>站点本身保持较轻的页面结构，不强制注册或下载，仅提供信息呈现与导航功能，符合“索引页”的定位。</p>
+            </div>
+        </div>
+
+        <!-- 使用建议 / 场景 -->
+        <h2 class="section-title">使用场景与建议</h2>
+        <p>
+            如果你正在收集体育领域的线上参考资料，或者希望了解某个方向的服务组织形式，可以把这个页面当作一个观察样本。它适合作为以下场景的补充信息源：
+        </p>
+        <ul style="margin-left: 1.8rem; margin-bottom: 1.8rem; line-height: 1.8; color: #2d3748;">
+            <li>梳理体育资讯类页面的常见内容模块与排版模式；</li>
+            <li>对比不同体育服务站的导航逻辑与信息密度；</li>
+            <li>作为日常浏览体育动态的轻量入口之一（非唯一或主要依赖）。</li>
+        </ul>
+        <p>
+            需要留意的是，任何单一索引页面都无法覆盖全部有效信息。建议在浏览 <a href="https://m-wanboty.com">万博体育</a> 的同时，结合其他可靠信息渠道进行交叉参照。尤其在涉及具体赛事数据、规则细节或服务条款时，应以官方或一手来源为准。
+        </p>
+
+        <!-- 可信但克制的说明 -->
+        <div class="quote-block">
+            <p><strong>关于信息可信度的一点说明</strong></p>
+            <p>本页面仅以资料整理视角介绍该站点的内容特征与结构。所涉链接指向的外部页面，其内容更新与准确性由运营方自行维护。建议读者根据自身判断，有选择地采纳其中的信息。不构成任何形式的推荐或背书。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <h2 class="section-title">常见疑问摘要</h2>
+        <div class="faq-short">
+            <div class="faq-item">
+                <strong>这个站点主要提供什么？</strong>
+                <span>围绕体育领域的资讯索引与相关信息陈列，侧重赛事消息与活动整理，而非社交或交易功能。</span>
+            </div>
+            <div class="faq-item">
+                <strong>是否需要注册才能浏览？</strong>
+                <span>页面本身不强制注册，大多数内容可直接浏览。部分深度功能或后续服务可能会有不同政策，以实际页面提示为准。</span>
+            </div>
+            <div class="faq-item">
+                <strong>作为信息索引页面，它的局限是什么？</strong>
+                <span>单一站点无法穷尽所有体育话题，且内容更新频率取决于运营方。建议结合主流体育媒体、统计数据库等共同使用。</span>
+            </div>
+        </div>
+
+        <div class="footnote">
+            <p>本文档基于产品说明式摘要方向整理 · 内容均来自公开可读的信息结构分析，不包含非公开或诱导性表述。</p>
+        </div>
+    </main>
+</body>
+</html>
